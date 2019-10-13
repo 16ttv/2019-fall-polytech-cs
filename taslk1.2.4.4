@@ -1,0 +1,11 @@
+a, b, c, d = [ int (i) for i in  input().split() ]
+
+e, f, g, h = [ int (i) for i in  input().split() ]
+
+
+s1 = (a >= e and a <= g ) or (c >= e and c <= g )
+s2 = (b >= f and b <= h ) or (d >= f and d <= h )
+s3 = (e >= a and e <= c ) or ( g >= a and g <= c )
+s4 = (f >= b and f <= d ) or ( h >= b and h <= d )
+
+вывести ("да" , if ((s1 и s2) or (s3 и s4)) or ((s1 и s4) or (s3 и s2)) else  "no" )

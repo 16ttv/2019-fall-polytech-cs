@@ -1,0 +1,32 @@
+N = input("ведите количесвтво людей в стране ")
+N1 = int(N)
+T = 0							
+H = 0								
+G = 0
+if ( int (N) %  2) = =  0: 
+    print(N)
+else:
+ N = int(N) - 1
+ while int(N) >>  0:
+    import random
+ r = random.randint(0, 1)
+    if r == 0:
+ G = G + 1
+ T = T + 1
+
+        print("Детей рождено: " + str(T) + " | Из них мальчиков: " + str(H))
+    else:
+ H = H + 1
+ N = int(N) - 2
+ T = T + 1
+        print("Детей рождено: " + str(T) + " | Из них мальчиков: " + str(H))
+N1 = N1 + T
+if (N1 %  2 ) = =  0:
+ N2 = N1 / 2
+else:
+ N2 = (N1- 1 ) /  2
+print("Численность населения после = " + str(N1))
+P = (G + N2) / (H + N2)
+Z = G + N2
+X = H + N2
+print("отношение количества женщин(" + str(Z) +") к мужчинам (" + str(X) +") = " + str(P))

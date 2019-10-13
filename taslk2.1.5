@@ -1,0 +1,23 @@
+def calculator(a):
+	assert a >= 0
+	s = str(a)
+	if '.' in s:
+	    lenght = abs(s.find('.') - len(s)) - 1
+	else:
+		lenght = 0 
+	if lenght % 2 != 0:
+		lenght += 1
+	
+	a10 = a * (10 ** lenght)
+	a10 = int(a10)
+	
+	x = 0
+	sqrt = 0
+	while x != 1:
+		if (sqrt * sqrt)<= a10 and ((sqrt + 1) * (sqrt + 1)) > a10:
+			j = 1
+		else: sqrt += 1
+	sqrt = sqrt / ((10 ** (lenght / 2)))
+	return(sqrt)
+
+print(calculator(123455.563211))

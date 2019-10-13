@@ -1,0 +1,42 @@
+def multiplication(a, b):
+	p = b
+	m = 0
+	c = 1
+	while a > c:
+		c = c << 1
+		m += 1
+	c = c >> 1
+	m = m - 1
+	b = b << m 
+	a -= c 
+	while a > 0:
+		b += p
+        a -= 1
+	return b 
+
+a = 3472299622
+b = -564155
+if a == 0 or b == 0:
+	print("результат произведения = 0")
+elif a < 0 or b < 0:
+	t = -1
+	a = abs(a)
+	b = abs(b)
+	p = b
+	if a < b:
+		q = multiplication(a,b)
+		print("результат произведения =", q-q-q)
+	else:
+		x = a
+		a = b
+		b = x
+		q = multiplication(a,b)
+		print("результат произведения =", q-q-q) 
+else:
+	if a < b:
+		print("результат произведения =",multiplication(a, b))
+	else:
+		x = a
+		a = b
+		b = x
+		print("результат произведения =",multiplication(a, b))
